@@ -1,21 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Classes | Project</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="src/css/style.css">
-  <link rel="icon" href="src/imgs/favicon.png" type="image/x-icon" />
-</head>
-<body>
-  <header>
-    <div class="links">
-      <a href="index.html">Sobre</a>
-      <a href="classes.html">Aulas</a>
-    </div>
-  </header>
+{% extends "layout.html" %}
+
+{% block head %} 
+  <title>Portfólio</title>  
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
 
   <div id="wrapper">
     <img src="https://cdn.pixabay.com/photo/2015/07/28/21/58/student-865073_960_720.jpg" alt="">
@@ -114,6 +104,6 @@
     </div>
   </div>
 
-  <script src="src/js/scripts.js"></script>
-</body>
-</html>
+  <script src="/js/scripts.js"></script>
+
+{% endblock %}
