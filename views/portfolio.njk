@@ -13,83 +13,20 @@
   </div>
 
   <section class="cards">
-    <div class="card" id="2Y0HXnYpn9E">
-      <div class="card__image-container">
-        <img src="https://img.youtube.com/vi/2Y0HXnYpn9E/maxresdefault.jpg" alt="Github Pages">
+    {% for item in items %}
+      <div class="card" id="{{item.id}}">
+        <div class="card__image-container">
+          <img src="https://img.youtube.com/vi/{{item.id}}/maxresdefault.jpg" alt="Imagem de {{item.title}}">
+        </div>
+        <div class="card__content">
+          <p>{{item.title}}</p>
+        </div>
+        <div class="card__info">
+          <p>{{item.duration}}</p>
+          <p class="card__price">{{item.price}}</p>
+        </div>
       </div>
-      <div class="card__content">
-        <p>Hospedagem no Gitub Pages</p>
-      </div>
-      <div class="card__info">
-        <p>35 min</p>
-        <p class="card__price">Free</p>
-      </div>
-    </div>
-
-    <div class="card" id="8h1qkjXFaDE">
-      <div class="card__image-container">
-        <img src="https://img.youtube.com/vi/8h1qkjXFaDE/maxresdefault.jpg" alt="Angular 9">
-      </div>
-      <div class="card__content">
-        <p>Curso Angular 9</p>
-      </div>
-      <div class="card__info">
-        <p>3 min</p>
-        <p class="card__price">Free</p>
-      </div>
-    </div>
-
-    <div class="card" id="hdDHg1p3YVc">
-      <div class="card__image-container">
-        <img src="https://img.youtube.com/vi/hdDHg1p3YVc/maxresdefault.jpg" alt="Python 3">
-      </div>
-      <div class="card__content">
-        <p>Python 3</p>
-      </div>
-      <div class="card__info">
-        <p>30 min</p>
-        <p class="card__price">Free</p>
-      </div>
-    </div>
-
-    <div class="card" id="1szPVvS5ax8">
-      <div class="card__image-container">
-        <img src="https://img.youtube.com/vi/1szPVvS5ax8/maxresdefault.jpg" alt="Aprenda Electron JS e Vue JS nessa App IRADA! Projeto DESKTOP com JAVASCRIPT!        ">
-      </div>
-      <div class="card__content">
-        <p>Aprenda Electron JS e Vue JS</p>
-      </div>
-      <div class="card__info">
-        <p>1h e 27 min</p>
-        <p class="card__price">Free</p>
-      </div>
-    </div>
-
-    <div class="card" id="cSa-SMVMGsE">
-      <div class="card__image-container">
-        <img src="https://img.youtube.com/vi/cSa-SMVMGsE/maxresdefault.jpg" alt="VueJS em 1 hora! (Teoria e prática)">
-      </div>
-      <div class="card__content">
-        <p>VueJS em 1 hora!</p>
-      </div>
-      <div class="card__info">
-        <p>55 min</p>
-        <p class="card__price">Free</p>
-      </div>
-    </div>
-
-    <div class="card" id="yiDq9wUiUjc">
-      <div class="card__image-container">
-        <img src="https://img.youtube.com/vi/yiDq9wUiUjc/maxresdefault.jpg" alt="Construindo um portfólio de respeito! - Calculadora de calorias com JavaScript">
-      </div>
-      <div class="card__content">
-        <p>Calculadora de calorias</p>
-      </div>
-      <div class="card__info">
-        <p>34 min</p>
-        <p class="card__price">Free</p>
-      </div>
-    </div>
+    {% endfor %}
   </section>
 
   <div class="modal-overlay">
