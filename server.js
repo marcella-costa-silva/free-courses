@@ -36,7 +36,15 @@ server.get('/portfolio', (req, res) => {
     avatar_url: 'https://cdn.pixabay.com/photo/2016/09/08/04/12/programmer-1653351_960_720.png',
     name: 'Aulas de Programação no Youtube'
   }
+
   return res.render('portfolio', { items: videos, about })
+})
+
+server.get('/video', (req, res) => {
+  const id = req.query.id
+  const video = videos.find((video) => video.id === id)
+  if (!video) return res.send('Video not found!')
+  return res.render('video', { item: video })
 })
 
 server.use((req, res) => res.status(404).render('not-found'))
