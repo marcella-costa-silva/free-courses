@@ -59,6 +59,6 @@ server.get('/courses:id', (req, res) => {
   return res.render('courses', { courses })
 })
 
-// server.use((req, res) => res.status(404).render('not-found'))
+server.use((req, res) => res.status(404).render('not-found'))
 
 server.listen(5000, () => console.log('O servidor está rodando'))
