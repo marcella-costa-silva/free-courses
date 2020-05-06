@@ -1,0 +1,26 @@
+{% extends "layout.njk" %}
+
+{% block head %} 
+  <title>Cursos</title>  
+{% endblock %}
+
+{% block content %}
+
+  <div id="wrapper">
+    <h1>Cursos</h1>
+  </div>
+
+  <section class="courses">
+    {% for course in courses %}
+      <h1>{{ course.id }}</h1>
+      {{ course.info_1 }}
+      {{ course.info_2 }}
+
+      {# <iframe src="https://www.youtube.com/embed/{{course.id2}}" frameborder="0"></iframe> #}
+    </div>
+    {% endfor %}
+  </section>
+
+  <script src="/js/scripts.js"></script>
+
+{% endblock %}

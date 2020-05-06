@@ -3,6 +3,7 @@ const nunjucks = require('nunjucks')
 
 const server = express()
 const videos = require('./data')
+const courses = require('./courses')
 
 server.use(express.static('public'))
 server.set('view engine', 'njk')
@@ -47,6 +48,17 @@ server.get('/video', (req, res) => {
   return res.render('video', { item: video })
 })
 
-server.use((req, res) => res.status(404).render('not-found'))
+server.get('/courses', (req, res) => {
+  return res.render('courses', { courses })
+})
+
+server.get('/courses:id', (req, res) => {
+  const id = req.params.id
+  const course = courses.find((course) => course.id === id)
+  if (!course) return res.send('Course not found!')
+  return res.render('courses', { courses })
+})
+
+// server.use((req, res) => res.status(404).render('not-found'))
 
 server.listen(5000, () => console.log('O servidor está rodando'))
