@@ -2,7 +2,8 @@ module.exports = [{
   id: "2Y0HXnYpn9E",
   title: "Hospedagem no Gitub Pages",
   duration: "35 min",
-  price: "Free"
+  price: "Free",
+  featured: true
 }, {
   id: "8h1qkjXFaDE",
   title: "Curso Angular 9",
@@ -22,10 +23,12 @@ module.exports = [{
   id: "cSa-SMVMGsE",
   title: "VueJS em 1 hora!",
   duration: "55 min",
-  price: "Free"
+  price: "Free",
+  featured: true
 }, {
   id: "yiDq9wUiUjc",
   title: "Calculadora de calorias",
   duration: "34 min",
-  price: "Free"
+  price: "Free",
+  featured: true
 }]

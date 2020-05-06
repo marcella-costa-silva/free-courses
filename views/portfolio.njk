@@ -8,15 +8,20 @@
 {% block content %}
 
   <div id="wrapper">
-    <img src="https://cdn.pixabay.com/photo/2015/07/28/21/58/student-865073_960_720.jpg" alt="">
-    <h1>Aulas</h1>
+    <img src="{{about.avatar_url}}" alt="Imagem de {{about.name}}">
+    <h1>{{about.name}}</h1>
   </div>
 
   <section class="cards">
     {% for item in items %}
       <div class="card" id="{{item.id}}">
-        <div class="card__image-container">
+        <div class="card__image-container {{ 'featured-wrapper' if item.featured }} ">
           <img src="https://img.youtube.com/vi/{{item.id}}/maxresdefault.jpg" alt="Imagem de {{item.title}}">
+       
+          {% if item.featured %}
+            <div class="featured">Featured</div>
+          {% endif %}
+       
         </div>
         <div class="card__content">
           <p>{{item.title}}</p>
